@@ -12,7 +12,7 @@ pipeline {
                 }
             }
         }
-        stage('Push Image') {
+        /*stage('Push Image') {
             steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_nexus', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
                     sh 'docker login  192.168.68.125:8083 -u $USERNAME -p $PASSWORD'
@@ -20,7 +20,7 @@ pipeline {
                     sh 'docker push  192.168.68.125:8083/repository/docker-private/microservicio:latest'
                 }
             }
-        }
+        }*/
 
         stage('Database') {            
             steps {
