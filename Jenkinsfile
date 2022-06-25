@@ -5,13 +5,13 @@ pipeline {
     }
     stages {
         
-        stage('Compile') {            
+        /*stage('Compile') {            
             steps {
                 dir("Servicios/Curso-Microservicios"){
                     sh "docker build -t microservicio ."
                 }
             }
-        }
+        }*/
         /*stage('Push Image') {
             steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_nexus', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
